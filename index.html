@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Israa Odeh">
     <meta name="description"
-        content="A web page with HTML and CSS to display a list of members, allow selection and search of members, and provide options to save or cancel changes.">
+        content="Web page with HTML and CSS to display a list of members, allow selection and search of members, and provide options to save or cancel changes for selecting members for the frontend development team.">
     <title>Frontend Member Picker</title>
     <link rel="icon" href="images/member.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -17,13 +18,20 @@
     </header>
 
     <main>
-        <article class="flex-container">
-            <!-- <h2>Add members to Front-end development team</h2> -->
-            <form action="https://httpbin.org/post" method="post">
-                <input type="search" name="search" placeholder="Find members">
+        <button class="close-btn" aria-label="Close">
+            <span class="close-icon">X</span>
+            <span class="close-text">ESC</span>
+        </button>
+
+        <form action="https://httpbin.org/post" method="post">
+            <section class="flex-container"
+                aria-label="Members to choose from for the frontend development team, with a search bar to filter results">
+                <div class="search-bar">
+                    <input type="search" name="search" placeholder="Find members">
+                </div>
 
                 <div class="flex-item">
-                    <label for="member1">Carolien Bloeme</label>
+                    <label for="member-1">Carolien Bloeme</label>
                     <input type="checkbox" name="member-name" id="member-1" value="Carolien Bloeme">
                 </div>
 
@@ -57,16 +65,13 @@
                     <input type="checkbox" name="member-name" id="member-7" value="Jacqueline Likoki">
                 </div>
 
-                <input type="button" value="Cancel">
-                <input type="button" value="Save">
-            </form>
-        </article>
-
+                <div class="flex-btn-item">
+                    <input type="reset" value="Cancel">
+                    <input type="submit" value="SAVE">
+                </div>
+            </section>
+        </form>
     </main>
-
-    <footer>
-
-    </footer>
 </body>
 
 </html>

@@ -1,0 +1,230 @@
+
+body {
+    min-width: 320px;
+}
+
+h1 {
+    margin: 2rem;
+    font-size: 1rem;
+    color: #3f4964;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.flex-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    padding: 12px 8px 12px 35px;
+    border: 1px solid #9298a6;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #9298a6;
+}
+
+.flex-item label {
+    padding-top: 3px;
+}
+
+.flex-item:has(:checked) {
+    color: #242d4e;
+}
+
+.search-bar {
+    display: flex;
+    width: 60%;
+    border-bottom: 1px solid #9298a6;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-image: url('../images/search-gray.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 15px 15px;
+}
+
+.search-bar:focus-within {
+    border-bottom: 1.3px solid #242d4e;
+    background-image: url('../images/search-black.png');
+}
+
+input[type="search"] {
+    width: 100%;
+    border:none;
+    outline: none;
+    padding: 10px 0;
+    box-sizing: border-box;
+    margin-left: 30px /* Space for the image */
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    background-image: url('../images/person-gray.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 10px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #9298a6;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+}
+
+input[type="checkbox"]:checked {
+    border: none;
+    background-image: url('../images/check-mark.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input[type="checkbox"]:checked::before {
+    background-image: url('../images/person-black.png');
+}
+
+input[type="reset"], input[type="submit"] {
+    padding: 15px 50px;
+    margin: 20px 10px 0 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input[value="Cancel"] {
+    background-color: #ffffff;
+    border: 1px solid #f6f5fa;
+    color: #e3e3eb;
+}
+
+input[value="SAVE"] {
+    background: linear-gradient(#6db7ff, #7594ff, #7886ff);
+    border: none;
+    color: #e3e3eb;
+    box-shadow: 0 3px 5px #7886ff9f;
+}
+
+input[value="Cancel"]:hover {
+    background-color: #f7f7f75d;
+}
+
+input[value="SAVE"]:hover {
+    background: #7886ff;
+}
+
+.close-btn {
+    background-color: transparent;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: #cfced6;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close-icon {
+    font-size: 1.25rem;
+}
+
+.close-text {
+    font-size: 0.75rem;
+    margin-top: 2px;
+}
+
+.close-btn:hover {
+    color: #cb2f2fc8;
+}
+
+
+@media (max-width: 420px) {
+    html {
+        font-size: 12px;
+    }
+
+    h1 {
+        max-width: 30ch;
+        font-size: 1.2rem;
+        margin: 2rem;
+    }
+
+    .flex-item {
+        padding: 8px 6px 8px 30px;
+    }
+
+    .flex-item label {
+        padding-top: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+
+    input[type="reset"], input[type="submit"] {
+        padding: 10px 30px;
+        margin: 20px 5px 0 5px;
+        font-size: 1.2rem;
+    }
+
+    input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 370px) {
+    html {
+        font-size: 12px;
+    }
+
+    .flex-btn-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input[type="reset"], input[type="submit"] {
+        padding: 10px 30px;
+        margin: 5px 0;
+        font-size: 1.2rem;
+    }
+
+    input[type="checkbox"] {
+        width: 10px;
+        height: 10px;
+    }
+
+    .close-btn {
+        right: 5px;
+        padding: 10px 5px;
+        font-size: 1rem;
+    }
+    
+    .close-icon {
+        font-size: 1.25rem;
+    }
+    
+    .close-text {
+        font-size: 0.67rem;
+    }
+}
