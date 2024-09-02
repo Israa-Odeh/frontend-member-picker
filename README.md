@@ -7,4 +7,5 @@ This task involves creating a basic HTML and CSS web page to practice structurin
 - Users can search for a specific member.
 - Options to save changes or cancel selections.
 
-JavaScript will be incorporated in a future phase to handle interactive actions once covered in upcoming training sessions.
+## Upcoming Features
+- JavaScript will be incorporated in a future phase to handle interactive actions once covered in upcoming training sessions.
