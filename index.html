@@ -9,96 +9,108 @@
         content="Web page with HTML and CSS to display a list of members, allow selection and search of members, and provide options to save or cancel changes for selecting members for the frontend development team.">
     <title>Frontend Member Picker</title>
     <link rel="icon" href="images/member.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mediaQueries.css">
 </head>
 
 <body>
-    <header>
-        <h1>Add members to Front-end development team</h1>
-        <button class="close-btn" aria-label="Close">
-            <span class="close-icon">X</span>
-            <span class="close-text">ESC</span>
+    <header class="header">
+        <h1 class="header__title">Add members to Front-end development team</h1>
+        <button class="header__close-btn header__close-btn--hover" aria-label="Close">
+            <span class="header__close-btn-icon">X</span>
+            <span class="header__close-btn-text">ESC</span>
         </button>
     </header>
 
     <main>
-        <form action="https://httpbin.org/post" method="post">
-            <section class="front-end-members-container"
+        <form class="form" action="https://httpbin.org/post" method="post">
+            <section class="form__members-container"
                 aria-label="Members to choose from for the frontend development team, with a search bar to filter results">
-                <div class="search-bar">
+                <div class="form__search-bar">
                     <img src="images/search-gray.png" alt="Gray magnifying glass icon representing search function"
-                        class="gray-search-icon" width="15" height="15">
+                        class="form__search-icon--gray" width="15" height="15">
                     <img src="images/search-black.png" alt="Black magnifying glass icon representing search function"
-                        class="black-search-icon" width="15" height="15">
-                    <input type="search" name="search" placeholder="Find members">
+                        class="form__search-icon--black" width="15" height="15">
+                    <input class="form__search-input" type="search" name="search" placeholder="Find members">
                 </div>
 
-                <div class="front-end-member">
-                    <img src="images/person-gray.png" alt="Gray icon of a person" class="gray-person-icon" width="15"
-                        height="15">
-                    <img src="images/person-black.png" alt="Black icon of a person" class="black-person-icon" width="15"
-                        height="15">
-                    <label for="member-1">Carolien Bloeme</label>
-                    <input type="checkbox" name="member-name" id="member-1" value="Carolien Bloeme">
+                <div class="form__member">
+                    <img src="images/person-gray.png" alt="Gray icon of a person" class="form__person-icon--gray"
+                        width="15" height="15">
+                    <img src="images/person-black.png" alt="Black icon of a person" class="form__person-icon--black"
+                        width="15" height="15">
+                    <label class="form__member-label" for="member-1">Carolien Bloeme</label>
+                    <input type="checkbox" name="member-name" id="member-1" value="Carolien Bloeme"
+                        class="form__member-checkbox">
                 </div>
 
-                <div class="front-end-member">
-                    <img src="images/person-gray.png" alt="Gray icon of a person" class="gray-person-icon" width="15"
-                        height="15">
-                    <img src="images/person-black.png" alt="Black icon of a person" class="black-person-icon" width="15"
-                        height="15">
-                    <label for="member-2">Sun Jun</label>
-                    <input type="checkbox" name="member-name" id="member-2" value="Sun Jun">
+                <div class="form__member">
+                    <img src="images/person-gray.png" alt="Gray icon of a person" class="form__person-icon--gray"
+                        width="15" height="15">
+                    <img src="images/person-black.png" alt="Black icon of a person" class="form__person-icon--black"
+                        width="15" height="15">
+                    <label class="form__member-label" for="member-2">Sun Jun</label>
+                    <input type="checkbox" name="member-name" id="member-2" value="Sun Jun"
+                        class="form__member-checkbox">
                 </div>
 
-                <div class="front-end-member">
-                    <img src="images/person-gray.png" alt="Gray icon of a person" class="gray-person-icon" width="15"
-                        height="15">
-                    <img src="images/person-black.png" alt="Black icon of a person" class="black-person-icon" width="15"
-                        height="15">
-                    <label for="member-3">Song Bao</label>
-                    <input type="checkbox" name="member-name" id="member-3" value="Song Bao">
+                <div class="form__member">
+                    <img src="images/person-gray.png" alt="Gray icon of a person" class="form__person-icon--gray"
+                        width="15" height="15">
+                    <img src="images/person-black.png" alt="Black icon of a person" class="form__person-icon--black"
+                        width="15" height="15">
+                    <label class="form__member-label" for="member-3">Song Bao</label>
+                    <input type="checkbox" name="member-name" id="member-3" value="Song Bao"
+                        class="form__member-checkbox">
                 </div>
 
-                <div class="front-end-member">
-                    <img src="images/person-gray.png" alt="Gray icon of a person" class="gray-person-icon" width="15"
-                        height="15">
-                    <img src="images/person-black.png" alt="Black icon of a person" class="black-person-icon" width="15"
-                        height="15">
-                    <label for="member-4">Olivia Arribas</label>
-                    <input type="checkbox" name="member-name" id="member-4" value="Olivia Arribas">
+                <div class="form__member">
+                    <img src="images/person-gray.png" alt="Gray icon of a person" class="form__person-icon--gray"
+                        width="15" height="15">
+                    <img src="images/person-black.png" alt="Black icon of a person" class="form__person-icon--black"
+                        width="15" height="15">
+                    <label class="form__member-label" for="member-4">Olivia Arribas</label>
+                    <input type="checkbox" name="member-name" id="member-4" value="Olivia Arribas"
+                        class="form__member-checkbox">
                 </div>
 
-                <div class="front-end-member">
-                    <img src="images/person-gray.png" alt="Gray icon of a person" class="gray-person-icon" width="15"
-                        height="15">
-                    <img src="images/person-black.png" alt="Black icon of a person" class="black-person-icon" width="15"
-                        height="15">
-                    <label for="member-5">Bonginkosi Mdladlana</label>
-                    <input type="checkbox" name="member-name" id="member-5" value="Bonginkosi Mdladlana">
+                <div class="form__member">
+                    <img src="images/person-gray.png" alt="Gray icon of a person" class="form__person-icon--gray"
+                        width="15" height="15">
+                    <img src="images/person-black.png" alt="Black icon of a person" class="form__person-icon--black"
+                        width="15" height="15">
+                    <label class="form__member-label" for="member-5">Bonginkosi Mdladlana</label>
+                    <input type="checkbox" name="member-name" id="member-5" value="Bonginkosi Mdladlana"
+                        class="form__member-checkbox">
                 </div>
 
-                <div class="front-end-member">
-                    <img src="images/person-gray.png" alt="Gray icon of a person" class="gray-person-icon" width="15"
-                        height="15">
-                    <img src="images/person-black.png" alt="Black icon of a person" class="black-person-icon" width="15"
-                        height="15">
-                    <label for="member-6">Arina Belomestnykh</label>
-                    <input type="checkbox" name="member-name" id="member-6" value="Arina Belomestnykh">
+                <div class="form__member">
+                    <img src="images/person-gray.png" alt="Gray icon of a person" class="form__person-icon--gray"
+                        width="15" height="15">
+                    <img src="images/person-black.png" alt="Black icon of a person" class="form__person-icon--black"
+                        width="15" height="15">
+                    <label class="form__member-label" class="form__member-label" for="member-6">Arina
+                        Belomestnykh</label>
+                    <input type="checkbox" name="member-name" id="member-6" value="Arina Belomestnykh"
+                        class="form__member-checkbox">
                 </div>
 
-                <div class="front-end-member">
-                    <img src="images/person-gray.png" alt="Gray icon of a person" class="gray-person-icon" width="15"
-                        height="15">
-                    <img src="images/person-black.png" alt="Black icon of a person" class="black-person-icon" width="15"
-                        height="15">
-                    <label for="member-7">Jacqueline Likoki</label>
-                    <input type="checkbox" name="member-name" id="member-7" value="Jacqueline Likoki">
+                <div class="form__member">
+                    <img src="images/person-gray.png" alt="Gray icon of a person" class="form__person-icon--gray"
+                        width="15" height="15">
+                    <img src="images/person-black.png" alt="Black icon of a person" class="form__person-icon--black"
+                        width="15" height="15">
+                    <label class="form__member-label" for="member-7">Jacqueline Likoki</label>
+                    <input type="checkbox" name="member-name" id="member-7" value="Jacqueline Likoki"
+                        class="form__member-checkbox">
                 </div>
 
-                <div class="form-btns">
-                    <input type="reset" value="Cancel">
-                    <input type="submit" value="SAVE">
+                <div class="form__buttons">
+                    <input type="reset" value="Cancel" class="form__button form__button--reset">
+                    <input type="submit" value="SAVE" class="form__button form__button--submit">
                 </div>
             </section>
         </form>
