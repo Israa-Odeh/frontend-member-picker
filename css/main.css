@@ -121,3 +121,15 @@
 .form__button--submit:hover {
     background: #7886ff;
 }
+
+/* For mobile devices and tablets (portrait) */
+@media (max-width: 768px) {
+    .form__member-checkbox {
+        width: 15px;
+        height: 15px;
+    }
+
+    .form__button {
+        padding: 10px 30px;
+    }
+}
